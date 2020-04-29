@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="App62.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:App62"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d"
+    >
+    <Page.Resources>
+
+        <AcrylicBrush
+            x:Key="CustomAcrylicBrush"
+            BackgroundSource="Backdrop"
+            FallbackColor="Black"
+            TintColor="Black"
+            TintLuminosityOpacity="0.1"
+            TintOpacity="1.0"
+            />
+        <AcrylicBrush
+            x:Key="CustomAcrylicBrush1"
+            BackgroundSource="Backdrop"
+            FallbackColor="Black"
+            TintColor="Black"
+            TintLuminosityOpacity="1.0"
+            TintOpacity="0.1"
+            />
+
+
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Image
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Source="ms-appx:///back.jpg"
+            Stretch="Fill"
+            />
+        <Rectangle
+            Grid.Column="0"
+            Width="400"
+            Height="100"
+            Fill="{StaticResource CustomAcrylicBrush1}"
+            >
+        </Rectangle>
+        <Rectangle
+            Grid.Column="1"
+            Width="400"
+            Height="100"
+            Fill="{StaticResource CustomAcrylicBrush}"
+            />
+
+    </Grid>
+</Page>
